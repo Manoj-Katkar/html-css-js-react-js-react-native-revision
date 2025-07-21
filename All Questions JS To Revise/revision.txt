@@ -1,0 +1,515 @@
+All Questions Or Concepts To Revise 
+1) What Is JavScript ?
+2) What Is DOM and BOM in JS 
+3) What is Event Propagation and Phases of Event Propagation
+
+Few Ans Of the Questions :
+//! Accessing methods 
+
+/**
+ * *getElementByTagNames() : return type HTML Collection 
+ * *getElementsByClassName() : return type HTML Collection 
+ * *querySelectorAll() : 1) Accessing elements in form of the css selectors 
+ *                      * 2)return type is NodeList 
+ * 
+ * *getElementById() :       return type single HTML element
+ * *querySelectorAll() :     return type is single element 
+ * 
+ * !classList() methods : 
+ * 
+ *            *1)add(): add the class Name 
+ * *           2)remove() : remove the className 
+ * *           3)toggle()  : to add and remove className both it will do for the targeted html element 
+ * *           4) replace : it will replace the className takes two arguments  replace( old className , new className)
+ * 
+ * 
+ * !DOM Events :
+ *              *click
+ *              *dblclick
+ *              *mouseover
+ *              *mouseout
+ *              *keyup
+ *              *keydown
+ *              *keypress
+ *              *input
+ *              *submit
+ *              *ended
+ * 
+ * !Event Propagation : 
+ * *                it is a mechanism in javascript how event is added to the elements and perform operations 
+ * 
+ * !phase of the event propogation : 
+ * 
+ * *          1)capturing : event will start from dom tree (window object) till reaching element this duration is known as capturing 
+ *  *                        in this stage capture option value change to true 
+ * 
+ * 
+ * *          2)target : in this stage event will be added and triggred to the element its call back will get executed 
+ * 
+ * 
+ * 
+ * *          3)bubbling : going back from the targeted element to dom tree root node that time duration is known as bubbling 
+ * 
+ * !Note : by default inner child will executed first and parent will be executed later 
+ * *       2)to stop event propogation we have to use stopPropagation() Method 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * !addEventListner():
+ * *                    it will accept the three arguments
+ * *                     1)type of event
+ * *                     2)call - back function
+ * *                     3)capture value (default value is false)
+ * 
+ * !DOM  : it is also the programming interface for interact with the html elements 
+ * 
+ * !BOM : (Browser Object Model)
+ * *                        it is also the programming interface given by the browser to interact with browser 
+ * *
+ * !Objects in BOM : 
+ * *                1)window object 
+ * *
+ * 
+ */
+
+
+4) How Javascript Engine Works (And Different JS Engines For Different browsers)
+5) Difference Between var , let and const keywords variables 
+6) datatypes In Javascript (primitive and non-primitive)
+7) Rules to declare the variables in javascript 
+8) Differant types of scopes in javascript 
+9) variable hosting and function hosting in javascript 
+10) TDZ (Temporal Dead Zone in JS created for let and const vriables only)
+11) How the primitive datatype in js are immutable and how non-primitive datatypes in js are mutable 
+12) Difference Between primitive datatype and non-primitive datatype
+13) What is Type-Coersion in js (auutomatically changes the datatype)
+14) Difference Between (== and ===) double equal to and triple equal to 
+15) What is template literals in JavScript (that is backtics and its advantanges how we can do the String interpolation)
+16) String important methods and properties : 
+            // ✅ String Property
+            // .length → Returns the number of characters in the string
+            console.log(string1.length); // Output: 13
+
+            // ✅ String Methods (One-liner summaries)
+
+        1) Searching Methods : 
+
+            // .startsWith(substring) → Checks if string starts with the given substring
+            console.log(string1.startsWith("Hello")); // true
+
+            // .endsWith(substring) → Checks if string ends with the given substring
+            console.log(string1.endsWith("World!")); // true
+
+            // .includes(substring) → Checks if string contains the given substring
+            console.log(string1.includes("World")); // true
+
+        2) To get the index of the string or character : 
+
+            // .indexOf(char/substring, fromIndex) → Returns index of first match, or -1 if not found
+            console.log(string1.indexOf('o', 5)); // Output: 8
+
+            // .lastIndexOf(char/substring, fromIndex) → Returns last match index before given position
+            console.log(string1.lastIndexOf('o', 7)); // Output: 4
+
+        3) to get the character at the particular index : 
+
+            // .charAt(index) → Returns the character at the specified index
+            console.log(string1.charAt(2)); // Output: l
+
+        4) to get the substring : 
+
+            // .substring(start, end) → Extracts substring from start to end (excluding end)
+            console.log(string1.substring(0, 5)); // Output: Hello
+
+            // .slice(start, end) → Extracts part of the string (accepts negative indices)
+            console.log(string1.slice(0, 5)); // Output: Hello
+            console.log(string1.slice(-6)); // Output: World!
+
+        5) to convert the string into Array : 
+
+            // .split(separator) → Splits string into an array by given separator
+            console.log(string1.split("")); // Output: Each character
+            console.log(string1.split(" ")); // Output: Words
+
+        6) To Concatinate the two Strings : 
+
+            // .concat(string) → Concatenates the given string(s)
+            console.log(string1.concat(string2)); // Output: Hello, World! How are you?
+
+            // + operator → Another way to concatenate strings
+            console.log(string1 + string2); // Output: Hello, World! How are you?
+
+        7) To Convert the String into the uppercase and lowercase :
+
+            // .toUpperCase() → Converts string to uppercase
+            console.log(string1.toUpperCase()); // Output: HELLO, WORLD!
+
+            // .toLowerCase() → Converts string to lowercase
+            console.log(string1.toLowerCase()); // Output: hello, world!
+
+            // .trim() → Removes leading and trailing whitespace
+            console.log(stringWithSpaces.trim()); // Output: Hello, World!
+
+
+//=========================================================== Array =============================================
+
+17) Array important methods and properties :
+
+            // ✅ Array Property
+            // .length → Returns the number of elements in the array
+            console.log(array.length); // Output: total elements count
+
+        1) Methods to Add/Remove Elements (Modify Original Array):
+
+            // .push(element1, element2) → Adds elements at the end of the array
+            array.push("new1", "new2");
+
+            // .pop() → Removes the last element of the array
+            array.pop();
+
+            // .unshift(element1, element2) → Adds elements at the beginning of the array
+            array.unshift("start1", "start2");
+
+            // .shift() → Removes the first element of the array
+            array.shift();
+
+            // .splice(startIndex, deleteCount, ...items) → Add/remove elements at any position
+            array.splice(1, 2, "insert1", "insert2");
+
+            // .reverse() → Reverses the array elements in-place
+            array.reverse();
+
+        2) Iteration Methods (Higher-Order Functions - Do NOT Modify Original Array):
+
+            // .forEach(callback) → Iterates over array elements, no return value
+            array.forEach((element, index, arr) => {});
+
+            // .map(callback) → Returns a new array with modified values
+            const mapped = array.map((element, index, arr) => element + 1);
+
+            // .filter(callback) → Returns a new array with elements that pass the test
+            const filtered = array.filter((element, index, arr) => element > 10);
+
+            // .find(callback) → Returns the first element that satisfies the test
+            const found = array.find((element, index, arr) => element === 20);
+
+            // .reduce(callback, initialValue) → Reduces array to a single value from left to right
+            const sum = array.reduce((acc, curr) => acc + curr, 0);
+
+            // .reduceRight(callback, initialValue) → Same as reduce but from right to left
+            const sumRev = array.reduceRight((acc, curr) => acc + curr, 0);
+
+        3) Methods That Return Boolean:
+
+            // .every(callback) → Returns true if all elements pass the test
+            const allPass = array.every((element) => element > 0);
+
+            // .some(callback) → Returns true if any element passes the test
+            const anyPass = array.some((element) => element > 50);
+
+        4) Search and Index Methods (Similar to String):
+
+            // .indexOf(element) → Returns first index of the element, or -1 if not found
+            const index = array.indexOf(30);
+
+            // .lastIndexOf(element) → Returns last index of the element, or -1
+            const lastIndex = array.lastIndexOf(30);
+
+        5) Combining or Extracting Elements:
+
+            // .concat(array2) → Merges arrays and returns a new array
+            const merged = array1.concat(array2);
+
+            // .slice(start, end) → Extracts a portion of the array (non-mutating)
+            const part = array.slice(1, 3);
+
+        6) Convert Array to String:
+
+            // .toString() → Converts the array to a comma-separated string
+            const str = array.toString();
+
+            // .join(separator) → Joins array into a string with specified separator
+            const joined = array.join(" - ");
+
+        7) Sorting:
+
+            // .sort() → Sorts the array based on Unicode (can be customized)
+            array.sort();
+
+            // .sort((a, b) => a - b) → Sorts array in ascending numerical order
+            array.sort((a, b) => a - b);
+
+            // .sort((a, b) => b - a) → Sorts array in descending numerical order
+            array.sort((a, b) => b - a);
+
+        8) Array Creation Methods:
+
+            // Array.from(iterable) → Converts iterable (like string) to array
+            Array.from("hello"); // ['h','e','l','l','o']
+
+            // Array.of(...elements) → Creates an array from arguments
+            Array.of(1, 2, 3); // [1, 2, 3]
+
+            // new Array(size) → Creates an array of given length
+            new Array(5); // [empty × 5]
+
+
+
+
+//=========================================================== Functions =============================================
+
+18) All Functions And its Methods : 
+// All functions are first class objects in JavaScript
+
+// How many functions we have in javascript?
+// 1) Named function (for this only the function hosting is possible in the global scope)
+// 2) Anonymous function (a function that does not have a name and we can not use it directlly)
+// 3) function with expression (we can use the Anynomous function as a value of a variable that is called function expression)
+// 4) Immediately Invoked Function Expression (IIFE) (a function that is executed immediately after it is defined) 
+// 5) Arrow function (a shorter syntax for writing functions, introduced in ES6)
+// 6) Function constructor (a way to create functions dynamically, not commonly used) (Most used to create the objects and initialize its properties)
+// 7) Higher Order Function (a function that takes another function as an argument or returns a function as its result)
+// 8) Callback function (a function that is passed as an argument to another function and is executed after some operation)
+// 9) Nested Function (a function defined inside another function, can access variables from the outer function's scope) (In this only closure will get created)
+// 10) Generator Function (a special type of function that can pause and resume its execution, introduced in ES6)
+
+// Also Will Be Covering the few Important Topics like :
+// Closures
+// Lexical Scope (the visibility of variables in nested functions)
+// Scope Chaining (How it will look for the variables if those are not defined in the current scope)
+// Function Hoisting (the behavior of moving entire function  to the top of their scope during compilation)
+// Call , Apply and Bind (methods to change the context of 'this' in functions)
+// this keyword value in the all the functions 
+
+
+
+
+
+//============================================== Objects in Javascript =============================
+
+19) All About the Objects ? : 
+
+
+// !📘 JAVASCRIPT OBJECTS - FULL NOTES
+
+// ✅ 1. Object Methods Overview
+// Object.keys(obj)         -> Returns all keys as an array
+// Object.values(obj)       -> Returns all values as an array
+// Object.entries(obj)      -> Returns all key-value pairs in a 2D array
+// Object.freeze(obj)       -> Prevents add/delete/update of properties (fully immutable)
+// Object.seal(obj)         -> Allows updates, but prevents add/delete
+// Object.isFrozen(obj)     -> Checks if object is frozen (returns boolean)
+// Object.isSealed(obj)     -> Checks if object is sealed (returns boolean)
+
+// ~Important: All frozen objects are sealed, but not all sealed objects are frozen
+
+//------------------------------------------------------
+
+// ✅ 2. Merging Objects
+
+// Using Object.assign()
+let merged1 = Object.assign({}, obj1, obj2);
+
+// Using Spread Operator (preferred - cleaner & non-mutating)
+let merged2 = { ...obj1, ...obj2 };
+
+//------------------------------------------------------
+
+// ✅ 3. Four Ways to Create Objects in JS
+
+// 1️⃣ Literal Way
+let objA = {
+    name: "Kiyansh",
+    age: 1
+};
+
+// 2️⃣ Using Object Constructor
+let objB = new Object();
+objB.name = "Aarav";
+
+// 3️⃣ Using Constructor Function
+function Car(name, year, pinCode) {
+    this.carName = name;
+    this.manufactureYear = year;
+    this.pinCode = pinCode;
+}
+let car1 = new Car("Mercedes", 2024, 400033);
+
+// 4️⃣ Using Class
+class Company {
+    constructor(name, year, revenue, profitOrLoss) {
+        this.name = name;
+        this.year = year;
+        this.revenue = revenue;
+        this.profitOrLoss = profitOrLoss;
+    }
+}
+let company1 = new Company("Tata Sons", 1978, "1.5B", "profit");
+
+//------------------------------------------------------
+
+// ✅ 4. Object.freeze() vs Object.seal()
+
+Object.freeze(company1);
+// ❌ Cannot add/delete/update
+
+Object.seal(company2);
+// ✅ Can update existing properties
+// ❌ Cannot add or delete
+
+console.log(Object.isFrozen(company1));  // true
+console.log(Object.isSealed(company2));  // true
+
+//------------------------------------------------------
+
+// ✅ 5. Rest & Spread Operators
+
+// REST (used during destructuring)
+let [first, second, ...restArr] = [10, 20, 30, 40];
+let { name, age, ...restObj } = {
+    name: "Manoj",
+    age: 25,
+    location: "Mumbai",
+    car: "Safari"
+};
+
+// SPREAD (used to expand elements/properties)
+let arr1 = [1, 2];
+let arr2 = [3, 4];
+let mergedArr = [...arr1, ...arr2];
+
+let obj1 = { a: 1 };
+let obj2 = { b: 2 };
+let mergedObj = { ...obj1, ...obj2 };
+
+//------------------------------------------------------
+
+// ✅ 6. Spread Operator in Function Arguments
+
+function sumNumbers(name, a, b, c, d, e) {
+    return a + b + c + d + e;
+}
+
+let values = [10, 20, 30, 40, 50];
+let total = sumNumbers("Manoj", ...values);  // Spread to pass as arguments
+
+//------------------------------------------------------
+
+// ✅ 7. Copying Objects & Arrays
+
+// 1️⃣ Copy Array
+let originalArr = [1, 2, 3];
+let copiedArr = [...originalArr];
+
+// 2️⃣ Copy Object
+let originalObj = { device: "laptop", price: 55000 };
+let copiedObj = { ...originalObj };
+copiedObj.device = "mobile";
+
+//------------------------------------------------------
+
+// ✅ 8. Value Copy vs Reference Copy
+
+// 🔹 Value Copy (Primitive Types)
+let num1 = 10;
+let num2 = num1;
+num1 = 45;  // num2 remains 10
+
+// 🔹 Reference Copy (Non-Primitive - like objects)
+let objRef1 = {
+    name: "Prithvi",
+    car: { model: "Mercedes", price: "1.3Cr" }
+};
+let objRef2 = objRef1;
+objRef1.name = "Anant";  // Affects objRef2 too
+
+//------------------------------------------------------
+
+// ✅ 9. Shallow Copy
+
+let shallowCopy = { ...objRef1 };  // new object, but nested objects share reference
+
+objRef1.car.model = "Tata Harrier";  // Also affects shallowCopy
+
+//------------------------------------------------------
+
+// ✅ 10. Deep Copy (Solves nested mutation issue)
+
+// Use JSON methods for deep copy (only works if no methods/functions inside)
+let deepCopy = JSON.parse(JSON.stringify(objRef1));
+
+objRef1.car.model = "Toyota Innova";  // Does NOT affect deepCopy
+
+//------------------------------------------------------
+
+// ✅ Summary
+/**
+ * 🔹 Object.keys(obj)      → Returns keys as array
+ * 🔹 Object.values(obj)    → Returns values as array
+ * 🔹 Object.entries(obj)   → Returns 2D array of key-value pairs
+ * 🔹 Object.freeze(obj)    → Fully locks object
+ * 🔹 Object.seal(obj)      → Allows update only
+ * 🔹 Spread (...)          → Expands arrays/objects for copying or merging
+ * 🔹 Rest (...)            → Collects remaining items into a single variable
+ * 🔹 assign()              → Merges source object into target (can mutate)
+ * 🔹 4 Object creation methods → literal, constructor fn, Object(), class
+ * 🔹 shallow vs deep copy  → shallow = 1st level only, deep = full independent clone
+ */
+
+// ✅ Developer Tips
+// - Validate user input to prevent bugs and vulnerabilities
+// - Use clear naming & comments for readability
+// - Test edge cases and unexpected inputs
+// - Use linters for consistent code style
+// - Stay hydrated and take breaks 🧠💧
+
+
+
+//============================ Asynchronous Programming Explain it All Web Api and all That I have image in my notebook from there refer that =================
+
+
+
+
+//=========================================== Event Delegation ===============================================
+/**
+ * !Event Delegation :
+ *    *             the case where the event happen on the one html element but they will not handle themself instead they will delegate means
+ *       pass on that event to another html element and that element will handle that particular event this concept is known as the event delegation
+ *
+ *    ^usecase : it is use to make your code efficient
+ *    !event delegation is the implementation of the event bubbling
+ *
+ *
+ *    !point to remember while implementing the event delegation :
+ *    *               Apply the addEventListner to the element in bublling phase who is least common Ancestor for the both
+ *                   the elements that we are optimizing to add the event listner
+ *
+ *
+ * //^ to get original target = event.target (means the element where I have to go that is going to be the fixed )
+ *
+ * // ^ to get the current target  = event.currentTarget;
+ *
+ */
+
+// const fs = require('fs')
+/**
+ * *here the fs is the library of the node js and it has the functions to deal with files on a system
+ * *it have the functions to deal with files means read the file , delete he file . to update a file
+ * *so first we have to import the files of that library
+ * *hence in require("fs") you have to write fs but for variable name you can take any name for that
+ */
+
+
+
+
+
+
+======================================= Event Propagation ==================================================
+refer to the below link :
+https://github.com/Manoj-Katkar/FullStack-LLD-2-and-LLD-3-Javascript-and-react-/tree/main/Interview%20Problems%20And%20Mock%20Preperation%20Hole%20Module%20Revision%20Javascript/Javascript/Event%20Delegation%20and%20Propagation%20image%20Notes
+(You will get the both the images)
+
+
+//in free time I have to learn more about the Currying in Javascript 
